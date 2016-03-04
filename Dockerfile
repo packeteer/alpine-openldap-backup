@@ -4,4 +4,4 @@ MAINTAINER packeteer <packeteer@gmail.com>
 
 RUN apk-install openldap openldap-clients openldap-back-hdb
 
-CMD ["sh /usr/sbin/crond -f"]
+CMD ["/usr/sbin/crond","-f"]
