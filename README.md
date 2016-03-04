@@ -1,8 +1,8 @@
-# alpine-openldap
-OpenLDAP container based on Alpine Linux 3.3
+# alpine-openldap-backup
+ container based on Alpine Linux 3.3
 
 this is a work in progress ie. it prob doesn't work :)
 
-version .07
+version .01
 
-docker run -d -p 389:389 -v conf:/etc/openldap -v data:/var/lib/openldap/openldap-data packeteer/alpine-openldap
+docker run -d -v conf:/etc/cron -v data:/opt/telstra/wholesale/ldap-backup/data -name ldap-backup packeteer/alpine-openldap-backup
