@@ -1,8 +1,9 @@
 # alpine-openldap-backup
- container based on Alpine Linux 3.3
+container based on Alpine Linux 3.3
 
-this is a work in progress ie. it prob doesn't work :)
+version .06
 
-version .03
+docker run -d -v /srv/ldap-backup/conf:/etc/periodic -v /srv/ldap-backup/data:/ldap/backup --name ldap-backup packeteer/alpine-openldap-backup
 
-docker run -d -v conf:/etc/periodic -v data:/ldap/backup --name ldap-backup packeteer/alpine-openldap-backup
+This is designed to work with my alpine-openldap container. Does not come with batteries
+add a script to the appropriate directory under /srv/ldap-backup/conf. note: the file should be executable and have no extension
